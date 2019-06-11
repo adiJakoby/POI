@@ -1,44 +1,70 @@
+</body
 <html>
-    <head>
-        <title>My Website</title>
-    </head>
-    <body ng-app="myApp">
-        <!-- load angular -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
-        <script src="https://code.angularjs.org/1.7.8/angular-route.js"></script>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+        }
 
-        <!-- load app -->
-        <script src="app.js"></script>
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
 
-        <!-- load controllers -->
-        <script src="pages/about/aboutController.js"></script>
-        <script src="pages/poi/poiController.js"></script>
-        <script src="pages/http/httpController.js"></script>
-        <script src="pages/logIn/logInController.js"></script>
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
 
-        <!-- the website -->
-        <h1>My Website</h1>
+        .navbar a:hover {
+            background: #ddd;
+            color: black;
+        }
 
-        <!-- menu -->
-        <ul>
-            <li>
-                <a href="#!">Home</a>
-            </li>
-            <li>
-                <a href="#!about">About</a>
-            </li>
-            <li>
-                <a href="#!logIn">Log In</a>
-            </li>
-            <li>
-                <a href="#!poi">POI</a>
-            </li>
-            <li>
-                <a href="#!httpRequest">POI</a>
-            </li>
-        </ul>
+        .main {
+            padding: 16px;
+            margin-top: 30px;
+            height: 1500px; /* Used in this example to enable scrolling */
+        }
+    </style>
+</head>
 
-        <!-- This section changes as the hashbang changes -->
-        <div ng-view></div>
-    </body>
+<body ng-app="myApp">
+
+<!-- load angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
+<script src="https://code.angularjs.org/1.7.8/angular-route.js"></script>
+
+<!-- load app -->
+<script src="app.js"></script>
+
+<!-- load controllers -->
+<script src="pages/about/aboutController.js"></script>
+<script src="pages/poi/poiController.js"></script>
+<script src="pages/http/httpController.js"></script>
+<script src="pages/logIn/logInController.js"></script>
+
+<!-- the website -->
+<h1>My Website</h1>
+
+<div class="navbar">
+    <a href="#!">Home</a>
+    <a href="#!about">About</a>
+    <a href="#!logIn">Log In</a>
+    <a href="#!poi">POI</a>
+    <a href="#!httpRequest">POI</a>
+</div>
+
+<!-- This section changes as the hashbang changes -->
+<div ng-view></div>
+</body>
 </html>
