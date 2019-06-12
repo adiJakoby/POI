@@ -1,4 +1,3 @@
-</body
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +37,7 @@
     </style>
 </head>
 
-<body ng-app="myApp">
+<body ng-controller="indexController" ng-app="myApp">
 
 <!-- load angular -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
@@ -46,6 +45,7 @@
 
 <!-- load app -->
 <script src="app.js"></script>
+<script src="indexController.js"></script>
 
 <!-- load controllers -->
 <script src="pages/about/aboutController.js"></script>
@@ -53,15 +53,18 @@
 <script src="pages/http/httpController.js"></script>
 <script src="pages/register/registerController.js"></script>
 <script src="pages/logIn/logInController.js"></script>
+<script src="pages/restorePassword/restorePasswordController.js"></script>
+<script src="pages/home/homeController.js"></script>
 
 <!-- the website -->
 <h1>My Website</h1>
 
 <div class="navbar">
+    <a ng-model="user">Hello {{user}}</a>
     <a href="#!">Home</a>
     <a href="#!about">About</a>
-    <a href="#!logIn">Log In</a>
-    <a href="#!register">Register</a>
+    <a href="#!logIn" ng-show="!loggedIn">Log In</a>
+    <a href="#!register" ng-show="!loggedIn">Register</a>
     <a href="#!poi">POI</a>
     <a href="#!httpRequest">POI</a>
 </div>

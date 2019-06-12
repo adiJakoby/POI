@@ -5,8 +5,8 @@ app.config(function($routeProvider)  {
     $routeProvider
         // homepage
         .when('/', {
-            // this is a template
-            template: '<h1>This is the default route</h1>'
+            templateUrl: 'pages/home/home.html',
+            controller : 'homeController as homeCtrl'
         })
         // about
         .when('/about', {
@@ -32,6 +32,10 @@ app.config(function($routeProvider)  {
         .when('/register', {
             templateUrl: 'pages/register/register.html',
             controller : 'registerController as registerCtrl'
+        })
+        .when('/restorePassword', {
+            templateUrl: 'pages/restorePassword/restorePassword.html',
+            controller : 'restorePasswordController as restorePasswordCtrl'
         })
         // other
         .otherwise({ redirectTo: '/' });

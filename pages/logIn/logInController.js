@@ -1,6 +1,6 @@
 // log-in controller
 angular.module("myApp")
-    .controller("logInController", function ($scope, $http) {
+    .controller("logInController", function ($scope, $http, $window) {
         $scope.myFunc = function () {
             let userName = (document.getElementById("userName").value);
             let password = (document.getElementById("password").value);
@@ -20,6 +20,8 @@ angular.module("myApp")
                 }
                 else{
                     sessionStorage.setItem("token", response.data);
+                    $scope.$emit('loggedIn', {userName: userName, loggedIn: true});
+                    $window.location.href = "#!about"
                 }
                 $scope.myWelcome = response.data;
             });
