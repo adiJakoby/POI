@@ -1,16 +1,10 @@
 angular.module('myApp').controller('homeController', function ($scope, $http) {
-    self = this;
+    let self = $scope;
+    self.points = [];
     let num = 1;
     let formdata = {
         minimalRank: num,
     };
-
-    // $http.get('http://localhost:3000/getRandomPoints/1').then(function (response) {
-    //     self.points = response.data;
-    //     console.log(self.points);
-    // }, function(err){
-    //     console.log(err);
-    // });
 
     $http({
         method : "GET",
@@ -19,7 +13,22 @@ angular.module('myApp').controller('homeController', function ($scope, $http) {
             minimalRank : num
         }
     }).then( function (res) {
-        console.log(res)
+        function fixAnswer(data) {
+            data = "[" + data +"]";
+            data = data.replace(/\n/gi, ",");
+
+            return data;
+        }
+
+        let ans = fixAnswer(res.data);
+        self.points = JSON.parse(ans);
+        // let i = 0;
+        // for(i; i < res.data.length; i++){
+        //     self.points = {
+        //         i: {name: res.data[i]['NAME']},
+        //     }
+        // }
+        console.log(self.points);
     }, function (err) {
         console.log(err)
     })

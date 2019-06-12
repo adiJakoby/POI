@@ -8,7 +8,7 @@
 <h2>POI</h2>
 
 <!-- display all cities -->
-<p ng-repeat="(id, point) in homeController.points">
-    Point Name: <span ng-bind="point.name"></span><br>
-    <img ng-src="{{ point.image }}">
+<p ng-repeat="item in points">
+    Point Name: <span ng-bind="item.NAME"></span><br>
+    <!--<img ng-src="{{ point.image }}">-->
 </p>
