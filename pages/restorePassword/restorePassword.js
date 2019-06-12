@@ -1,6 +1,6 @@
 // log-in controller
 angular.module("myApp")
-    .controller("logInController", function ($scope, $http) {
+    .controller("restorePasswordController", function ($scope, $http) {
         $scope.myFunc = function () {
             let userName = (document.getElementById("userName").value);
             let password = (document.getElementById("password").value);

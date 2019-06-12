@@ -50,30 +50,31 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate="Enter email">
-
                     <input class="input100" id="email" type="email" name="email" placeholder="Email">
                     <span class="focus-input100"></span>
                 </div>
 
-                <div class="dropdown">
-                    <a class="txt2">Select your city of residence</a>
-                    <br/>
-                    <select class="txt2">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
-                    </select>
+                <div class="wrap-input100 validate-input" data-validate="Select your city of residence">
+                    <input class="input100" id="city" type="text" name="city" placeholder="Select your city of residence">
+                    <span class="focus-input100"></span>
                 </div>
-                <br/>
+
                 <div class="dropdown">
                     <a class="txt2">Select your country of residence</a>
                     <br/>
-                    <select class="txt2">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="opel">Opel</option>
-                        <option value="audi">Audi</option>
+                    <select class="txt2" id = country>
+                        <option value="Australia">Australia</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="China">China</option>
+                        <option value="Denemark">Denemark</option>
+                        <option value="Israel">Israel</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="August">August</option>
+                        <option value="Norway">Norway</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="USA">USA</option>
                     </select>
                 </div>
                 <br/>
@@ -98,7 +99,7 @@
                 </div>
 
                 <div class="container-login100-form-btn">
-                    <button class="login100-form-btn">
+                    <button class="login100-form-btn" ng-click="myFunc()">
                         Submit registration form
                     </button>
                 </div>
