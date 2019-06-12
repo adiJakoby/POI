@@ -1,0 +1,14 @@
+<!-- css -->
+<style>
+    img {
+        height: 100px;
+    }
+</style>
+
+<h2>POI</h2>
+
+<!-- display all cities -->
+<p ng-repeat="(id, point) in homeController.points">
+    Point Name: <span ng-bind="point.name"></span><br>
+    <img ng-src="{{ point.image }}">
+</p>
