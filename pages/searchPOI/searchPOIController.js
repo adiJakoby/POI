@@ -3,27 +3,13 @@ angular.module('myApp').controller('searchPOIController', function ($scope, $htt
 
     let self = $scope;
     self.points = [];
-    let num = 1;
-    let formdata = {
-        minimalRank: num,
-    };
+
     $http({
         method : "GET",
-        url : "http://localhost:3000/getRandomPoints",
-        params : {
-            minimalRank : num
-        }
+        url : "http://localhost:3000/getAllPoints",
     }).then( function (res) {
-        function fixAnswer(data) {
-            data = "[" + data +"]";
-            data = data.replace(/\n/gi, ",");
+        self.points = res.data;
 
-            return data;
-        }
-
-        let ans = fixAnswer(res.data);
-        self.points = JSON.parse(ans);
-        console.log(self.points);
     }, function (err) {
         console.log(err)
     })
