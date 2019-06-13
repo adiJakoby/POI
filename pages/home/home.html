@@ -1,106 +1,46 @@
-<!-- css -->
-<style>
-    img {
-        height: 100px;
-    }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="pages/home/images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="pages/home/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="pages/home/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="pages/home/css/main.css">
+    <link rel="stylesheet" type="text/css" href="pages/home/css/util.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+
 
 <h2>POI</h2>
-
-<!-- display all cities -->
-<p ng-repeat="item in points">
-    Point Name: <span ng-bind="item.NAME"></span><br>
-    <!--<img ng-src="{{ point.image }}">-->
-</p>
-
-<!--<ul>-->
-    <!--<li>-->
-        <!--<a ng-click="alertSomething()">Alert something</a>-->
-    <!--</li>-->
-    <!--<li>-->
-        <!--<a ng-click="confirmSomething()">Confirm something</a>-->
-    <!--</li>-->
-    <!--<li>-->
-        <!--<a ng-click="promptSomething()">Prompt something</a>-->
-    <!--</li>-->
-<!--</ul>-->
-
-<!--<div-->
-        <!--bn-modals-->
-        <!--ng-show="subview"-->
-        <!--class="m-modals"-->
-        <!--ng-switch="subview">-->
-
-    <!--&lt;!&ndash; BEGIN: Alert Modal. &ndash;&gt;-->
-    <!--<div-->
-            <!--ng-switch-when="alert"-->
-            <!--ng-controller="AlertModalController"-->
-            <!--class="modal">-->
-
-        <!--<p>-->
-            <!--{{ message }}-->
-        <!--</p>-->
-
-        <!--<p>-->
-            <!--<a ng-click="close()">Ok, I got it!</a>-->
-        <!--</p>-->
-
-        <!--&lt;!&ndash; This is to demonstrate that we can jump from one modal to another. &ndash;&gt;-->
-        <!--<p>-->
-            <!--<a ng-click="jumpToConfirm()" class="jump">Jump over to the confirm modal</a>-->
-        <!--</p>-->
-
-    <!--</div>-->
-    <!--&lt;!&ndash; END: Alert Modal. &ndash;&gt;-->
+<div id="background">
+    <!-- display all cities -->
+    <p ng-repeat="item in points">
+        <a class="txt1" ng-click="myFunc()">
+            Point Name: <span ng-bind="item.NAME"></span><br>
+        </a>
+        <!--<img ng-src="{{ point.image }}">-->
+    </p>
+</div>
 
 
-    <!--&lt;!&ndash; BEGIN: Confirm Modal. &ndash;&gt;-->
-    <!--<div-->
-            <!--ng-switch-when="confirm"-->
-            <!--ng-controller="ConfirmModalController"-->
-            <!--class="modal">-->
-
-        <!--<p>-->
-            <!--{{ message }}-->
-        <!--</p>-->
-
-        <!--<p>-->
-            <!--<a ng-click="confirm()">{{ confirmButton }}</a>-->
-            <!--&mdash;-->
-            <!--<a ng-click="deny()">{{ denyButton }}</a>-->
-        <!--</p>-->
-
-    <!--</div>-->
-    <!--&lt;!&ndash; END: Confirm Modal. &ndash;&gt;-->
-
-
-    <!--&lt;!&ndash; BEGIN: Prompt Modal. &ndash;&gt;-->
-    <!--<form-->
-            <!--ng-switch-when="prompt"-->
-            <!--ng-controller="PromptModalController"-->
-            <!--ng-submit="submit()"-->
-            <!--class="modal">-->
-
-        <!--<p>-->
-            <!--{{ message }}-->
-        <!--</p>-->
-
-        <!--<p ng-if="errorMessage">-->
-            <!--<strong>Sorry:</strong> {{ errorMessage }}-->
-        <!--</p>-->
-
-        <!--<p>-->
-            <!--<input type="text" ng-model="form.input" />-->
-        <!--</p>-->
-
-        <!--<p>-->
-            <!--<a ng-click="submit()">Submit</a>-->
-            <!--&mdash;-->
-            <!--<a ng-click="cancel()">Cancel</a>-->
-        <!--</p>-->
-
-    <!--</form>-->
-    <!--&lt;!&ndash; END: Prompt Modal. &ndash;&gt;-->
-
-<!--</div>-->
-
+<div id="poiShow" ng-show="poiShow">
+    div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <div class="container-login100-form-btn">
+                <button class="login100-form-btn" ng-click="myFunc()">
+                    Login
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
