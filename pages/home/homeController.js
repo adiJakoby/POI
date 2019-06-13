@@ -4,9 +4,7 @@ angular.module('myApp').controller('homeController', function ($scope, $http) {
     let self = $scope;
     self.points = [];
     let num = 1;
-    let formdata = {
-        minimalRank: num,
-    };
+
     $http({
         method : "GET",
         url : "http://localhost:3000/getRandomPoints",
