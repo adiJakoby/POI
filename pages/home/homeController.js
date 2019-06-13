@@ -1,6 +1,7 @@
 angular.module('myApp').controller('homeController', function ($scope, $http) {
     $scope.poiShow = false;
 
+
     let self = $scope;
     self.points = [];
     let num = 1;
@@ -28,8 +29,15 @@ angular.module('myApp').controller('homeController', function ($scope, $http) {
         console.log(err)
     })
 
-    $scope.myFunc = function () {
+    $scope.toShow = function (name) {
+        console.log(name);
+        //console.log(image);
+        $scope.imgSource = 'images/3.JPG';
         $scope.poiShow = true;
+    }
+
+    $scope.stopShow = function () {
+        $scope.poiShow = false;
     }
 
 });

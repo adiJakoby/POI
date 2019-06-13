@@ -22,7 +22,7 @@
 <div id="background">
     <!-- display all cities -->
     <p ng-repeat="item in points">
-        <a class="txt1" ng-click="myFunc()">
+        <a ng-click="toShow(item.NAME)">
             Point Name: <span ng-bind="item.NAME"></span><br>
         </a>
         <!--<img ng-src="{{ point.image }}">-->
@@ -34,9 +34,13 @@
     div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
+            <span class="login100-form-logo">
+                <img ng-model="imgSource" src= {{imgSource}}>
+            </span>
+            
             <div class="container-login100-form-btn">
-                <button class="login100-form-btn" ng-click="myFunc()">
-                    Login
+                <button class="login100-form-btn" ng-click="stopShow()">
+                    Exit
                 </button>
             </div>
         </div>
