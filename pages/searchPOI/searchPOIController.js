@@ -1,4 +1,4 @@
-angular.module('myApp').controller('homeController', function ($scope, $http) {
+angular.module('myApp').controller('searchPOIController', function ($scope, $http) {
     $scope.poiShow = false;
 
     let self = $scope;
