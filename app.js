@@ -41,6 +41,10 @@ app.config(function($routeProvider)  {
             templateUrl: 'pages/searchPOI/searchPOI.html',
             controller : 'searchPOIController as searchPOICtrl'
         })
+        .when('/loggedIn', {
+            templateUrl: 'pages/loggedIn/loggedIn.html',
+            controller : 'loggedInController as loggedInCtrl'
+        })
         // other
         .otherwise({ redirectTo: '/' });
 });

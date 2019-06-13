@@ -22,7 +22,7 @@ angular.module('myApp').controller('homeController', function ($scope, $http) {
         }
 
         let ans = fixAnswer(res.data);
-        self.points = JSON.parse(ans);
+        // self.points = JSON.parse(ans);
         console.log(self.points);
     }, function (err) {
         console.log(err)
